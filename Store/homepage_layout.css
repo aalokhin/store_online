@@ -1,0 +1,55 @@
+/*how product shall look*/
+body 
+{
+	background-color: #FFFFFF;
+}
+
+
+header
+{
+	height:50px;
+	background:#F0F0F0;
+
+
+	margin:0px auto;
+}
+
+a:link
+{
+    color: red;
+}
+
+a:visited
+{
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+    cursor: pointer;
+}
+a:active {
+    color: blue;
+    cursor: pointer;
+}
+
+
+.item .listing
+{
+	display: flex;
+	flex-direction: column;
+	
+}
+/*how product mix shall look*/
+.product_mix
+{
+
+
+}
+
+
+
+/*https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/xs/iphone-xs-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1535589885371
+https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/xr/iphone-xr-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1535393884526
+https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/7/iphone-7-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1536872983100
+https://store.storeimages.cdn-apple.com/4667/as-images.apple.com/is/image/AppleInc/aos/published/images/m/bp/mbp13/space/mbp13-space-select-201807_GEO_RU?wid=452&hei=420&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1531167602646*/
