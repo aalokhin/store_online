@@ -1,4 +1,5 @@
 <?php
+    session_start();
 		include ("src/help.php");
 		include ("src/help2.php");
 		include ("src/help3_display.php");
@@ -23,18 +24,71 @@
  <body>
 
 <header>
-  <?php echo $body;?>
 
-  <p><a href="index.php">Главная</a> | <a href="contact.php">Contacts</a> | <a href="admin_area.php">Admin Area</a> | <a href="cart.php">Cart</a></p>
+<div class="overlay">
 
+  <?php echo "<h1>".$body."</h1>";?>
+    <?php
+    if(!$_SESSION['login']) {
+        echo '<a href="create_acc.php">Registration</a>';
+        echo '<a href="login.php"> Sign in</a>';
+    }
+    else {
+        echo "<h2>Hello ".$_SESSION['login'];
+        echo " / ".'<a href="logout.php" >Logout</a>'."</h2>";
+    }
+  ?>
+
+  <p><a href="index.php">Homepage</a>  <a href="contact.php">Contacts</a>  <a href="admin_area.php">Admin Area</a>  <a href="cart.php">Cart</a>   <a href="categories.php"> Категории</a>  </p>
+</div>
 </header>
 
-<hr />
-Welcome to our Online Store!
 
-		<?php 
-			if ($goods != NULL)
-				echo display_product_mix($goods);
-		?>
+
+
+
+
+
+
+
+
+<hr />
+
+
+    <?php 
+      if ($goods != NULL)
+      {
+       
+       
+          // $i = 0;
+          // while($goods[$i])
+          // {
+          //   echo $goods[$i]['title']."    \n";
+    
+          //   print_r($goods[$i]['categories']);
+
+          //   $i++;
+          // }
+
+          echo display_product_mix($goods);
+        
+      }
+    ?>
  </body>
+
+
+ 
+<footer>
+  
+
+<div class="navbar">
+  <a href="index.php" class="active">Home</a>
+  <a href="categories.php">Categories</a>
+  <a href="admin_area.php">Admin Area</a>
+  <a href="cart.php">Cart</a>
+
+</div>
+
+</footer>
+ 
 </html>

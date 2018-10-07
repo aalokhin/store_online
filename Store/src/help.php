@@ -26,5 +26,24 @@
 	}
 
 
+	function categories_button_display()
+	{
+		if (file_exists("base/cats") == 0)
+			return ;
+		else
+		{
+			$cats = unserialize(file_get_contents("base/cats"));
+		
+			$output = "<ul>";
+			foreach($cats as $array)
+			{
+				
+			}
+			$output = $output."</ul>";
+			return $output;
+		}
+	}
+
+
 	
 ?>

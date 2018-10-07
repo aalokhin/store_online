@@ -1,27 +1,120 @@
-/*how product shall look*/
 body 
 {
-	background-color: #FFFFFF;
+	background-color: #000 ;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+
+	background-image: linear-gradient(#aa4b6b, #6b6b83, #6E4C5F);
+
+
+	
+
 }
 
+.hello
+{
+	text-transform: capitalize;
+	font-family: 'Andale Mono', AndaleMono, monospace;
+
+
+}
 
 header
 {
-	height:50px;
-	background:#F0F0F0;
+	background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+	text-align: center;
+	width: 100%;
+	height: 240px;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+
+	background: #000;
 
 
 	margin:0px auto;
 }
 
+
+header .overlay{
+	
+	opacity: 0.8;
+
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	
+	text-shadow: 1px 1px 1px #7BEAF3;
+  	background-image: linear-gradient( 135deg, #3b8d99, #aa4b6b 20%, #3b8d99 100%);
+	
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+    color: #660846;
+
+}
+
+h2 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 25px;
+	margin-bottom: 30px;
+    color: #000;
+}
+
+
+
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+
+.add_p {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+.add_p :hover{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 a:link
 {
-    color: red;
+    color: #E8D6E0;
 }
 
 a:visited
 {
-    color: green;
+    color: #E8D6E0;
 }
 
 a:hover {
@@ -34,22 +127,441 @@ a:active {
 }
 
 
-.item .listing
-{
-	display: flex;
-	flex-direction: column;
+
+
+.item {
+
+	background-image:
+    linear-gradient(
+      to right, 
+
+      #D1AAC0 20%,
+      #6b6b83 75%
+
+
+    );
+
+	width:  500px;
+	height: 500px;
+	
+	padding:0px 4px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	overflow: auto;
+
+
+
+	
+
 	
 }
-/*how product mix shall look*/
-.product_mix
-{
 
+
+
+
+
+.picture {
+	
+	width:  300px;
+	height: 300px;
+	border: groove border;
+	border-color: #E8D6E0;
+	float: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 
 
 
-/*https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/xs/iphone-xs-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1535589885371
-https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/xr/iphone-xr-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1535393884526
-https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/7/iphone-7-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1536872983100
-https://store.storeimages.cdn-apple.com/4667/as-images.apple.com/is/image/AppleInc/aos/published/images/m/bp/mbp13/space/mbp13-space-select-201807_GEO_RU?wid=452&hei=420&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1531167602646*/
+.listing{
+	display: flex;
+  	padding-left: 20%;
+  	padding-right: 10%;
+	display: block;
+}
+
+
+/*img{
+	  width:  500px;
+	  height: 500px;
+}*/
+
+/*how product mix shall look*/
+
+
+h3{
+	font-size: 25px;
+	margin-bottom: 30px;
+	position: relative;
+
+	font-family: 'Andale Mono', AndaleMono, monospace;
+
+	text-align: center;
+	color: #6E4C5F;
+	text-transform: capitalize;;
+
+
+}
+
+.description
+{
+	text-align: center;
+	color: #625058;
+	text-indent: 20px;
+	line-height: 0.5;
+	font-family: 'Dancing Script', cursive;
+
+}
+
+.price
+{
+	text-align: center;
+	color: #625058;
+	text-indent: 20px;
+	line-height: 1.8;
+	font-family: 'Andale Mono', AndaleMono, monospace
+
+}
+
+
+
+
+.navbar {
+	background-color: #6b6b83;
+
+    
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.navbar a {
+
+
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #E8D6E0;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color: #E8D6E0;
+    color: white;
+}
+
+
+
+.category_button
+{
+
+    color: #f2f2f2;
+    background-color: #6b6b83;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Andale Mono', AndaleMono, monospace;
+
+}
+.category_button:hover
+{
+
+    background-color: #E8D6E0;
+    color: black;
+
+}
+
+
+.category{
+	
+
+    
+    overflow: hidden;
+
+
+    width: 100%;
+
+	display: block;;
+
+}
+.select_category	{
+	padding: 14px 16px;
+    text-decoration: none;
+    font-size: 27px;
+    font-family: 'Andale Mono', AndaleMono, monospace;
+    color: #E8D6E0;
+
+
+
+	text-align: center;
+
+}
+.category1{
+
+  list-style: none;
+  text-align: center;
+
+
+
+  line-height: 100px;
+  display: inline-block;
+
+
+
+
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+
+
+
+
+.show_admin_panels
+{
+	 margin: auto;
+    width: 50%;
+    padding: 10px;
+ 
+
+
+}
+
+.show_admin_panels2
+{
+	float: center;
+
+
+}
+
+.form-style-3{
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-3 label > span{
+    float: left;
+    width: 100px;
+    color: #F072A9;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #FFD2D2;
+    padding: 20px;
+    background: #FFF4F4;
+    box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+    color: #FFA0C9;
+    border-top: 1px solid #FFD2D2;
+    border-left: 1px solid #FFD2D2;
+    border-right: 1px solid #FFD2D2;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF4F4;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow:-0px -1px 2px #F1F1F1;
+    -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+}
+.form-style-3 textarea{
+    width:250px;
+    height:100px;
+}
+.form-style-3 input[type=text],
+
+.form-style-3 select, 
+.form-style-3 textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #FFC2DC;
+    outline: none;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+    width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+    background: #EB3B88;
+    border: 1px solid #C94A81;
+    padding: 5px 15px 5px 15px;
+    color: #FFCBE2;
+    box-shadow: inset -1px -1px 3px #FF62A7;
+    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;    
+    font-weight: bold;
+}
+.required{
+    color:red;
+    font-weight:normal;
+}
+
+
+
+
+/*the log in form*/
+
+
+
+
+
+
+
+.login {
+  margin: 20px auto;
+  width: 300px;
+  padding: 30px 25px;
+  background-image:  gradient(#D1AAC0 20%,
+      #6b6b83 75%);
+  border: 1px solid #E8D6E0;
+}
+
+h1.login-title {
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  color: #ADADAD;
+  text-align:center;
+  background: #f7f7f7;
+ 
+}
+
+.login-input {
+  width: 285px;
+  height: 50px;
+  margin-bottom: 25px;
+  padding-left:10px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Andale Mono', AndaleMono, monospace;
+
+}
+.login-input:focus {
+    border-color:#6e8095;
+    outline: none;
+    font-family: 'Andale Mono', AndaleMono, monospace;
+
+  }
+.login-button {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background: #3b8d99;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer; 
+  outline:0;
+  font-family: 'Andale Mono', AndaleMono, monospace;
+
+}
+.login-button:hover
+{
+    background: #E8D6E0;
+
+}
+
+.login-lost
+{
+    font-family: 'Andale Mono', AndaleMono, monospace;
+    font-size:25px;
+  text-align:center;
+  margin-bottom:0px;
+  color: #E8D6E0;
+}
+
+.login-lost a
+{
+  color:#E8D6E0;
+  text-decoration:none;
+  font-size:25px;
+}
+.login-lost a:hover
+{
+  color:#E8D6E0;
+  text-decoration:none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size:25px;
+  background-color: #3b8d99;
+}
+
+.create_acc
+{
+    font-family: 'Andale Mono', AndaleMono, monospace;
+    color:#666;
+    text-decoration:none;
+    font-size:23px;
+
+}
+
+
+
+/* Style the links inside the navigation bar */
+
+
+/*(#aa4b6b, #6b6b83, #6E4C5F)*. item #D1AAC0 20%,
+      #6b6b83 75%/
+
+      3b8d99 azure
+
+/*nice light pink E8D6E0 */
+
+
+
+
+
+
+
+
+
+
+
