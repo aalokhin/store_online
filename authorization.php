@@ -2,6 +2,10 @@
 
 
 <?php
+ session_start();
+		include ("src/help.php");
+		include ("src/help2.php");
+		include ("src/help3_display.php");
 
 $title = 'PHP: just a simple Online Ecommerce Store';
         $body  = ' We want to sell you things that make you happy';
@@ -25,16 +29,15 @@ $title = 'PHP: just a simple Online Ecommerce Store';
   <?php echo "<h1>".$body."</h1>";?>
     <?php
     if(!$_SESSION['login']) {
-        echo '<a href="create_acc.php">Registration</a>';
-        echo '<a href="login.php"> Sign in</a>';
+        echo '<div class="select_category"> <a href="login.php"> Sign in</a></div>';
     }
     else {
-        echo "<h2>Hello ".$_SESSION['login'];
-        echo " / ".'<a href="logout.php" class="login">Logout</a>'."</h2>";
+        echo "<h3> Hello ".$_SESSION['login']."!";
+        echo " / ".'<a href="logout.php" >Logout</a>'."</h3>";
     }
   ?>
 
-  <p><a href="index.php">Homepage</a>  <a href="contact.php">Contacts</a>  <a href="admin_area.php">Admin Area</a>  <a href="cart.php">Cart</a>   <a href="categories.php"> Категории</a>  </p>
+  
 </div>
 </header>
 <hr />
@@ -50,10 +53,7 @@ if($_SESSION['login'] == "admin")
 elseif($_SESSION["login"]) {
     echo "<p>To login as admin, firstly <a href='logout.php'>logout</a></p>\n";
 }
-else {
-    $admin = 'admin';
-    $pass = 'a029d0df84eb5549c641e04a9ef389e5';
-}
+
 ?>
 
 
@@ -70,13 +70,40 @@ else {
 
 <?php
 
-if($_POST['submit']){
- if($admin == $_POST['user'] AND $pass == md5($_POST['pass'])){
- $_SESSION['login'] = $admin;
- header("Location: admin_area.php");
- exit;
- }else echo '<p>Логин или пароль неверны!</p>';
+if($_POST['submit'])
+{
+if (find_admin($_POST['user']) == 1)
+{
+	$pass = pull_pass($_POST['user']);
+	$str = md5($_POST['pass']);
+	
+
+	if($pass == md5($_POST['pass']))
+	{
+		$_SESSION['login'] = 'admin';
+		header("Location: admin_area.php");
+		exit;
+	}
+	else{ echo '<div class="login-lost">Логин или пароль неверны!</div>';}
+
+}
+else echo '<div class="login-lost">Логин или пароль неверны!</div>';
 }
 
 
 ?>
+</body>
+
+<footer>
+  
+
+<div class="navbar">
+  <a href="index.php" >Home</a>
+  <a href="categories.php">Categories</a>
+  <a href="admin_area.php">Admin Area</a>
+  <a href="authorization.php" class="active">Log In</a>
+  <a href="create_acc.php">Sign Up</a>
+  <a href="contact.php">Contact</a>
+</div>
+
+</footer>

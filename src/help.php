@@ -20,7 +20,7 @@
 		}
 		if (file_exists("base/users") == 0)
 		{
-			$array[0] = array('login' => "admin", 'password' => hash("md5", "mypass"), 'type' => "admin");
+			$array[0] = array('login' => "admin", 'password' => hash("md5", "mypass"));
 			file_put_contents("base/users", serialize($array));
 		}
 	}

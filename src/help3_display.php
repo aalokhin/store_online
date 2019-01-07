@@ -71,7 +71,7 @@
 					<img class='picture' src='{$products[$i][image_url]}'>
 					<p class='description'>{$products[$i][descr]}</p>
 					<p class='price'> Price: {$products[$i][price]} $</p>
-					<form action='cart.php' method='get'>
+					<form action='add_to_cart.php' method='get'>
 					<button class='add_p' type='submit' name='add' value='$s'>
 						Add to cart
 					</button>

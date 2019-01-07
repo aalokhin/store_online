@@ -2,9 +2,6 @@
 session_start();
 ?>
 
-
-
-
 <?php
 
 $title = 'PHP: just a simple Online Ecommerce Store';
@@ -32,16 +29,15 @@ $title = 'PHP: just a simple Online Ecommerce Store';
   <?php echo "<h1>".$body."</h1>";?>
     <?php
     if(!$_SESSION['login']) {
-        echo '<a href="create_acc.php">Registration</a>';
-        echo '<a href="login.php"> Sign in</a>';
+        echo '<div class="select_category"> <a href="login.php"> Sign in</a></div>';
     }
     else {
-        echo "<h2>Hello ".$_SESSION['login'];
-        echo " / ".'<a href="logout.php" class="login">Logout</a>'."</h2>";
+        echo "<h3> Hello ".$_SESSION['login']."!";
+        echo " / ".'<a href="logout.php" >Logout</a>'."</h3>";
     }
   ?>
 
-  <p><a href="index.php">Homepage</a>  <a href="contact.php">Contacts</a>  <a href="admin_area.php">Admin Area</a>  <a href="cart.php">Cart</a>   <a href="categories.php"> Категории</a>  </p>
+  
 </div>
 </header>
 
@@ -58,7 +54,11 @@ $title = 'PHP: just a simple Online Ecommerce Store';
 
 <?php
 $file = "base/u";
+    unset($_SESSION['in']);
+    if(!$_SESSION['v'] || $_SESSION['v']==2)
+    header("Location:aa.php");
 if ($_POST['submit']) {
+    unset ($_SESSION['v']);
     if ($_POST['login'] && $_POST['passwd']) {
         if (file_exists("/base") == false)
             mkdir("/base");
@@ -83,3 +83,17 @@ if ($_POST['submit']) {
         echo "ERROR: username or password wasn't entered\n";
 }
 ?>
+
+</body>
+<footer>
+<div class="navbar">
+  <a href="index.php">Home</a>
+  <a href="categories.php" >Categories</a>
+  <a href="admin_area.php">Admin Area</a>
+  <a href="cart.php">Cart</a>
+    <a href="authorization.php">Log In</a>
+  <a href="create_acc.php" class="active">Sign Up</a>
+
+  <a href="contact.php">Contact</a>
+</div>
+</footer>
